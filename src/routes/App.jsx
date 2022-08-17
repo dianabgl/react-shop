@@ -19,7 +19,7 @@ const App = () => {
   const initialState = useInitialState();
   return (
     <AppContext.Provider value={initialState}>
-    <HashRouter basename="/react-shop">
+    <BrowseRouter basename="/react-shop">
       <Layout>
         <Routes>        
           <Route exact path="/" element={<Home />} />
@@ -33,7 +33,7 @@ const App = () => {
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Layout>    
-    </HashRouter>
+    </BrowseRouter>
     </AppContext.Provider>
   );
 }
